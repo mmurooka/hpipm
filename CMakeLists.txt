@@ -90,6 +90,8 @@ if(NOT ${CMAKE_PROJECT_NAME} STREQUAL hpipm)
 	set(HPIPM_ALLOWED_REF_BLAS ${ALLOWED_REF_BLAS} PARENT_SCOPE)
 endif()
 
+find_package(blasfeo)
+
 # BLASFEO Option
 if(NOT TARGET blasfeo)
 	set(BLASFEO_PATH "/opt/blasfeo" CACHE STRING "BLASFEO installation path")
